@@ -1,27 +1,9 @@
-@media (min-width: 768px){
-    .left {
-        float: left;
-        width: 30%;
-    }
-    .right{
-        float: left;
-        width: 62%;
-    }
-    .bottom{
-        float: left;
-        width: 93.4%;
-    }
-
-
-}
-
 .ad{
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-div{
-    display: block;
-}
+
 .content{
     position: relative;
     display: block;
@@ -30,6 +12,7 @@ div{
     padding: 0px 20px;
     text-align: left;
     background: #fff;
+    padding-bottom: 2em;
 }
 
 .text{
@@ -40,15 +23,30 @@ div{
     display: inline-block;
 }
 
-.left ,.right{
-    border: solid 1px;
-    margin: 10px;
-    height: 40em;
+.left{
+    flex: 1 0 250px ;
+}
+
+.right{
+    flex: 9 ;
 }
 
 .bottom{
+    display: flex;
+}
+
+.bottom-tb{
+    flex: 1;
     border: solid 1px;
     margin: 10px;
+}
+
+.left ,.right{
+    border: solid 1px;
+    margin: 10px;
+}
+
+.bottom{
     height: 100%;
 }
 
@@ -70,6 +68,8 @@ div{
     width: 70%;
     height: 2em;
 }
+
+
 
 #save{
     width: auto;
@@ -100,7 +100,9 @@ div{
     
 }
 
-
+.inner-Con{
+    padding-bottom: 3em;
+}
 .ddrop-upload{
     min-height: 120px;
     width: 100%;
@@ -114,10 +116,7 @@ div{
     padding: 0 0 25px 0;
 }
 
-.ddrop-preview img{
-    width: 400px;
-    height: 210px;
-}
+
 
 /* AD List */
 
