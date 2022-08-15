@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+
+    <div class="ad">
+        <div class="left">
+            <div class="info_header">
+                <span class="text">Banner Settings</span>
+            </div>
+            <div class="content">
+                <span>Title</span>
+                <div class="inner-Title">
+                    <div class="input_container">
+                        <input type="text" class="left_input" name="title" value="" placeholder="Banner Title">
+                    </div>
+
+                </div>
+                <span>URL</span>
+                <div class="inner-URL">
+                    <div class="input_container">
+                        <input type="text" class="left_input" name="banner_url" value="" placeholder="http://">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="info_header">
+                <span class="text">Banner</span>
+                <button id="save">Save Banner</button>
+            </div>
+            <div class="content">
+                <div class="inner-Pre" >
+                    <div class="sep_line" ><span ><strong>Preview</strong></span></div>
+                    <div class="ddrop-preview">
+                        <img src="" width="100%" height="100%" alt="" class="img_box">
+                    </div>
+
+                </div>
+                <div class="inner-Con">
+                    <div class="sep_line" ><span ><strong>Content</strong></span></div>
+                    <div class="ddrop-upload">
+                        <input style="padding-top: 50px;" type="file" onchange="previewFile()" class="img_box"><br>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+    
+    <div class="bottom">
+        <table id="customers">
+            <tr>
+              <th>Title</th>
+              <th>URL</th>
+              <th>IMG</th>
+            </tr>
+            <tr>
+              <td>20202 Intel DevCup 競賽說明會</td>
+              <td>http://makerpro.cc</td>
+              <td>makerpro.png</td>
+            </tr>
+            <tr>
+              <td>20202 Intel DevCup 競賽說明會</td>
+              <td>http://makerpro.cc</td>
+              <td>makerpro.png</td>
+            </tr>
+            <tr>
+              <td>20202 Intel DevCup 競賽說明會</td>
+              <td>http://makerpro.cc</td>
+              <td>makerpro.png</td>
+            </tr>
+            <tr>
+              <td>20202 Intel DevCup 競賽說明會</td>
+              <td>http://makerpro.cc</td>
+              <td>makerpro.png</td>
+            </tr>
+            <tr>
+              <td>20202 Intel DevCup 競賽說明會</td>
+              <td>http://makerpro.cc</td>
+              <td>makerpro.png</td>
+            </tr>
+
+ 
+          </table>
+    </div>
+    
+    <!-- <script src="script.js"></script> -->
+    <script>
+        function previewFile() {
+    const preview = document.querySelector('img');
+    const file = document.querySelector('input[type=file]').files[0];
+    const reader = new FileReader();
+  
+    reader.addEventListener("load", () => {
+      // convert image file to base64 string
+      preview.src = reader.result;
+    }, false);
+  
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
+    </script>
+</body>
+</html>
