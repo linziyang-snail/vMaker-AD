@@ -1,0 +1,30 @@
+img[src=""],img:not([src]){
+    opacity:0;
+}
+
+#ad-inner{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+
+
+#closebtn{
+    position: absolute;
+    border-radius: 100%;
+    color: red;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    padding-top: 5px;
+    opacity: 0.5;
+    text-align: center;
+
+}
+
+#closebtn:hover{
+    opacity: 1; 
+}
+
+
+

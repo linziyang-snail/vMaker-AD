@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup-ads.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ad">
+        <div id="ad-inner">
+            <span id="closebtn" onclick="closeAd()">
+            
+            </span>
+            <img  id="slide" width="400" height="200" >
+    </div>
+
+    </div>
+
+
+
+
+    <script>
+        let i =0;
+let adImage = [];
+let time = 3000;
+let slide = document.getElementById('slide');
+let ad = document.getElementById('ad');
+let closeBtn = document.getElementById('closebtn');
+
+
+adImage[0]='Images/1.jpg';
+adImage[1]='Images/2.jpg';
+adImage[2]='Images/3.jpg';
+
+function changeImg(){
+    closeBtn.innerHTML = 'X';
+    slide.src = adImage[i];
+    if(i <adImage.length -1){
+        i++;
+    } else{
+        i=0;
+    }
+
+    setTimeout("changeImg()", time);
+}
+
+function closeAd(){
+    ad.style.display = 'none'
+}
+
+window.onload = setTimeout("changeImg()", "5000");
+    </script>
+</body>
+</html>
